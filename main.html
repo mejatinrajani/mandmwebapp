@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Responsive Navbar</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="main.html" class="nav__logo">M&M</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="main.html" class="nav__link">
+                            <i class="ri-arrow-right-up-line"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="bansuri.html" class="nav__link">
+                            <i class="ri-arrow-right-up-line"></i>
+                            <span>Bansuri.ai</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="first.html" class="nav__link">
+                            <i class="ri-arrow-right-up-line"></i>
+                            <span>Meditation</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="mindfulness.html" class="nav__link">
+                            <i class="ri-arrow-right-up-line"></i>
+                            <span>Mindfullenss</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="aboutus.html" class="nav__link">
+                            <i class="ri-arrow-right-up-line"></i>
+                            <span>About Us</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+                <div class="nav__social">
+                    <a href="https://www.instagram.com/" target="_blank" class="nav__social-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://github.com/" target="_blank" class="nav__social-link">
+                        <i class="ri-github-line"></i>
+                    </a>
+                    <a href="https://dribbble.com/" target="_blank" class="nav__social-link">
+                        <i class="ri-dribbble-line"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="nav__social-link">
+                        <i class="ri-linkedin-box-line"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-menu"></i>
+            </div>
+        </nav>
+    </header>
+    <!--=============== MAIN JS ===============-->
+    <main>
+        <!-- Insert page sections -->
+         <div class="text1">
+            <h1><u>Namaskaram</u></h1>
+            <div class="container1">
+                <div class="txt1">
+                    <u><p><h1>Meditation</h1></p></u>
+                </div>
+                <div class="txt2">
+                    <p>In stillness, we find clarity; through meditation, we discover the path to our true selves. Embrace each moment of silence as a step towards inner harmony and deeper understanding</p>
+                </div>
+                <a href="first.html"><button id="btn1">Start you guided meditation</button></a>
+            </div>
+            <div class="container1">
+                <div class="txt1">
+                    <u><p><h1>Bansuri.ai</h1></p></u>
+                    <div class="txt2">
+                        <p>With bansuri.ai, the wisdom of the Bhagavad Gita is at your fingertips, guiding you on your journey to inner peace and enlightenment. Let its teachings inspire your thoughts and actions, transforming your life one insight at a time.</p>
+                    </div>
+                </div>
+                <a href="bansuri.html"><button id="btn1">Visit Bansuri.ai and ask your problem</button></a>
+            </div>
+            <div class="container1">
+                <div class="txt1">
+                    <u><p><h1>Mindfulness</h1></p></u>
+                    <div class="txt2">
+                        <p>Mindfulness is the art of being present; each moment is a new opportunity to embrace life fully. By cultivating awareness in our daily actions, we unlock the beauty and richness of the here and now.</p>
+                    </div>
+                </div>
+                <a href="mindfulness.html"><button id="btn1">Start your Mindfulness Session</button></a>
+            </div>
+            <div class="txt8">
+                <u><p>Beautiful Stories For You</p></u>
+            </div>
+            <div class="container1">
+                <div class="txt1">
+                    <u><p><h1>Arjuna and Ascetic</h1></p></u>
+                <div class="txt2">
+                        <p>This is a short story based on life of Arjuna and his journey.</p>
+                </div>
+                <a href="aaa.html"><button id="btn2">Start Reading Now</button></a>
+            </div>
+    </main>
+    <div class="container1">
+        <div class="txt1">
+            <u><p><h1>Krishna, I need only You</h1></p></u>
+        <div class="txt2">
+                <p>This is a short story based the "Apram Paar Leela of Mighty God Shree Krishna".</p>
+        </div>
+        <a href="bbb.html"><button id="btn2">Start Reading Now</button></a>
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navClose = document.getElementById('nav-close')
+        const navMenu = document.getElementById('nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('show-menu');
+        });
+        navClose.addEventListener('click' ,()=>{
+            navMenu.classList.remove('show-menu');
+        });
+    </script>
+</body>
+</html>

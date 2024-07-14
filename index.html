@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#" method="post">
+                <input type="hidden" name="whichform" value="signup">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="social"><i class="bx bxl-linkedin-square"></i></a>
+                    <a href="#" class="social"><i class="bx bxl-whatsapp"></i></a>
+                </div>
+                <span>enter your cerendetails</span>
+                <input type="text" placeholder="Name" name="name1"/>
+                <input type="email" placeholder="Email" name="email1"/>
+                <input type="password" placeholder="Password" name="password1"/>
+                <input type="password" placeholder="Confirm Password" name="password2"/>
+                <a href="main.html"><button type="button">Sign Up</button></a>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#" method="post">
+                <input type="hidden" name="whichform" value="signin">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="social"><i class="bx bxl-linkedin-square"></i></a>
+                    <a href="#" class="social"><i class="bx bxl-whatsapp"></i></a>
+                </div>
+                <span>enter your details</span>
+                <input type="text" placeholder="Enter your username" name="name2" />
+                <input type="password" placeholder="Password" name="password3"/>
+                <a href="#">Forgot your password?</a>
+                <a href="main.html"><button type="button">Sign In</button></a>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your details and access your account.</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Don't have an account yet? Let's sign up.</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>
+            Created with ❤ by Jatin Rajani            
+        </p>
+    </footer>
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+        
+        signUpButton.addEventListener('click', () => {
+        	container.classList.add("right-panel-active");
+        });
+        
+        signInButton.addEventListener('click', () => {
+        	container.classList.remove("right-panel-active");
+        });
+    </script>
+</body>
+</html>

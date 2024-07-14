@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+<body>
+    <header>
+        <div class="triangle"></div>
+    </header>
+    <main>
+        <div class="box1">
+            <div class="dropdown">
+                <button class="dropdown-button">---------Select---------</button>
+                <div class="dropdown-content">
+                    <div class="option">
+                        <p>Mindfullness Meditation</p><br>
+                        <p>10 minutes guided meditation</p><br>
+                        <p>Beach sounds for deep focus</p>
+                    </div>
+                </div>
+            </div>
+            <a href="a.html"><button type="submit" id="but">Start</button></a>
+        </div>
+        <div class="box2">
+            <div class="dropdown">
+                <button class="dropdown-button">---------Select---------</button>
+                <div class="dropdown-content">
+                    <div class="option">
+                        <p>Focused Meditation Meditation</p><br>
+                        <p>5 minutes guided meditation</p><br>
+                        <p>Rain sounds for deep focus</p>
+                    </div>
+                </div>
+            </div>
+            <a href="b.html"><button type="submit" id="but">Start</button></a>
+        </div>
+        <div class="box3">
+            <div class="dropdown">
+                <button class="dropdown-button">---------Select---------</button>
+                <div class="dropdown-content">
+                    <div class="option">
+                        <p>Relaxed Meditation</p><br>
+                        <p>5 minutes guided meditation</p><br>
+                        <p>Radiation sounds for deep focus</p>
+                    </div>
+                </div>
+            </div>
+            <a href="c.html"><button type="submit" id="but">Start</button></a>
+        </div>
+    </main>
+    <footer>
+    </footer>
+<script>
+    // Select all dropdown buttons and their contents
+    const dropdownButtons = document.querySelectorAll('.dropdown-button');
+    const dropdownContents = document.querySelectorAll('.dropdown-content');
+    
+    dropdownButtons.forEach((button, index) => {
+        const options = dropdownContents[index].querySelectorAll('.option');
+
+        // Add click event for each option
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                button.textContent = option.textContent; // Set button text to selected option
+                dropdownContents[index].style.display = 'none'; // Close dropdown
+            });
+        });
+
+        // Toggle dropdown display when button is clicked
+        button.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent event from bubbling up
+            dropdownContents[index].style.display = dropdownContents[index].style.display === 'block' ? 'none' : 'block'; // Toggle dropdown
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', () => {
+        dropdownContents.forEach(content => {
+            content.style.display = 'none'; // Close all dropdowns
+        });
+    });
+</script>
+</body>
+</html>
